@@ -1,4 +1,4 @@
-# Are Phota Labs' models novel? An honest benchmark
+# Phota Labs: What's behind the identity model? A benchmark
 
 **TL;DR:** Based on our observations, information shared publicly by Phota Labs, and benchmarks conducted today, here is what we believe to be true: Phota Labs has a proprietary identity model that genuinely works. It improves identity preservation by +39% (generation) and +23% (edits) over vanilla Nano Banana 2. But it doesn't do the generation or editing itself. Google's Nano Banana handles that; Phota's model runs as a second pass to correct identity drift. Without a trained profile, the identity model doesn't run at all. You get vanilla NB at Google pricing + $0.01. The identity correction also fights the edit: expressions and poses get pulled back toward training data, trading creative range for identity stability. We benchmarked 250 images across 4 metrics. Full data below.
 
