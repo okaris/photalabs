@@ -14,13 +14,9 @@ Then we looked closer.
 
 Testing with Gemini's content analysis revealed that every Phota output carried Google's [SynthID watermark](https://deepmind.google/technologies/synthid/), flagged as images created with Google models. When we ran the same prompts through vanilla Nano Banana (Gemini 3.x) with the Phota-selected profile picture as a reference image, we got the same outputs. Same default clothing from the reference photo. Same composition patterns. Same artifacts.
 
-After community questions, Phota Labs shared [how their system works](https://x.com/PhotaLabs/status/2037723587071918541):
+After community questions, Phota Labs [shared how their system works](https://x.com/PhotaLabs/status/2037723587071918541): *"For base image generation, Phota uses leading foundation models (both open and closed source - including Nano Banana). On top of those, we've trained our own identity model [...] to preserve identity consistently."*
 
-![Phota Labs explanation](https://cloud.inference.sh/app/files/u/4mg21r6ta37mpaz6ktzwtt8krr/01kmtzvsbdcrzry18vfyzsv18b.png)
-
-When [we asked directly](https://x.com/okaris/status/2037749210003460359) whether a Google model does the main editing and whether their proprietary model always contributes, Phota [confirmed](https://x.com/PhotaLabs/status/2037779340075880862) that without a trained profile, their identity model doesn't run. A foundation model like NB handles everything:
-
-![Phota Labs response](https://cloud.inference.sh/app/files/u/4mg21r6ta37mpaz6ktzwtt8krr/01kmtzwt3zt9hb17hqn1hsrb33.png)
+When [we asked directly](https://x.com/okaris/status/2037749210003460359) whether their proprietary model always contributes, Phota [confirmed](https://x.com/PhotaLabs/status/2037779340075880862): *"If there are no profiles present, there is no notion of personalization. Only in that case [...] one of the flagship foundation models (like NB) is doing the heavy lifting."*
 
 In other words: **without a trained profile, Phota is a passthrough to Google's Nano Banana at Google pricing plus a $0.01 markup.** No proprietary model runs at all.
 
